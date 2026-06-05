@@ -1,17 +1,10 @@
 import { HStack, VStack, Link, Button, Text } from "@chakra-ui/react";
 import { ColorModeButton } from "./color-mode"
-import { M_PLUS_Rounded_1c } from "next/font/google";
+import { Epilogue } from "next/font/google";
+import { Bold } from "lucide-react";
 //import { Link } from "react-router-dom";
 
-const links = [
-  { name: "Home", href: "home" }, 
-  { name: "About", href: "about" }, 
-  { name: "Portfolio", href: "portfolio" },
-  { name: "Links", href: "https://eldwretch.carrd.co/" }, 
-  { name: "Contact", href: "mailto:eldwretch@yahoo.com" }, 
-];
-
-const mPlusRounded1c = M_PLUS_Rounded_1c({ 
+const epilogue = Epilogue({ 
   weight: "700"
 });
 
@@ -23,27 +16,12 @@ const MenuLinks = ({ isMobile = false }) => {
       
       <ColorModeButton />
 
-      {links.map((link) => (
-        <Link
-          key={link.name}
-          href={link.href}
-          fontWeight="medium"
-          color="black"
-          _hover={{
-            colorPalette: "orange",
-            textDecoration: "underline",
-          }}
-          transition="color 0.2s ease"
-        >
-          {link.name}
-        </Link>
-      ))}
-
-      <Link href="https://ko-fi.com/eldwretch" target="_blank">
+      <Link /*href="https://ko-fi.com/eldwretch" target="_blank"*/>
         <Button
         bg="orange.400"
         variant="solid"
         size="sm"
+        fontSize={20}
         borderRadius="full"
         px={6}
         _hover={{
@@ -51,7 +29,7 @@ const MenuLinks = ({ isMobile = false }) => {
           shadow: "lg",
         }}
         transition="all 0.2s ease"
-        className={`text-center ${mPlusRounded1c.className}`}
+        className={`text-center ${epilogue.className}`}
         >
           <Text color="black">
             Like what you see? Support my work!

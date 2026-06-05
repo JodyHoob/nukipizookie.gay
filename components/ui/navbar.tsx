@@ -5,25 +5,28 @@ import Logo from "./logo";
 import MenuLinks from "./menuLinks";
 import MobileDrawer from "./mobileDrawer";
 
-/*export const NavImage = () => {
+export const NavImage = () => {
     return(
+        
         <Image 
         asChild
         maskImage="linear-gradient(to bottom, black 50%, transparent)"
         position="relative"
         >
         <Image
-        // src="/personal-website/PaperCranes.jpg"
-        src="/PaperCranes.jpg" 
+        // src="/personal-website/Landscape.jpeg"
+        src="/Landscape.jpeg" 
         alt="Background image"
         aspectRatio={10/1.5}
-        width="100%"
+        w="100vw"
         style={{ objectFit: 'cover', objectPosition: 'top',  zIndex: 0}} 
         position="relative"
         />
         </Image>
+        
+        
     );
-}*/
+}
 
 export const Navbar = () => {
     return (
@@ -33,7 +36,7 @@ export const Navbar = () => {
             align="center"
             justify="space-between"
             wrap="wrap"
-            gap={{ base: 8, lg: 16 }} 
+            gap={{ base: 2, lg: 2 }} 
             px={{ base: 6, lg: 12 }} //6 12
             py={3} 
             maxW={{ base: "full", xl: "1440px" }}
