@@ -4,6 +4,8 @@ import { Container, Box, Heading, Center, Image, VStack, HStack, Tabs } from "@c
 import { NavImage, Navbar } from "@/components/ui/navbar";
 import { Epilogue } from "next/font/google"
 import Portfolio from "./portfolio/page";
+import About from "./about/page";
+import Side from "./side/page"
 
 const epilogue = Epilogue({ 
   weight: "700"
@@ -14,7 +16,6 @@ export default function Home() {
     <Container maxW="full" px={0} >
         
             <VStack gap="4">
-
                 <center>
                    <Box h="1vh" position="relative">
                       <NavImage></NavImage>
@@ -24,8 +25,13 @@ export default function Home() {
                     </Box>
                 </center>
 
-                <HStack>
-                  <Box w="100vw" pt={"12%"} position="relative">
+                <HStack align="start" w="100%">
+
+                  <Box py="10vh" h="90vh" w="20%" position="sticky" top="-20">
+                    <Side></Side>
+                  </Box>
+
+                  <Box /*w="100vw"*/ w="60%" pt={"12%"} position="relative">
                     <Tabs.Root 
                     px={4}
                     //minW={}
@@ -48,13 +54,14 @@ export default function Home() {
                         <Tabs.Content value="portfolio"> 
                           <Portfolio></Portfolio>
                         </Tabs.Content>
+                        <Tabs.Content value="about"> 
+                          <About></About>
+                        </Tabs.Content>
                     </Tabs.Root>
                   </Box>
                 </HStack>
 
             </VStack>
-
-  
     </Container>
   );
 }
