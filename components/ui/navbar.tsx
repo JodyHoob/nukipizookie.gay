@@ -4,10 +4,10 @@ import { Flex, Box, Image } from "@chakra-ui/react";
 import Logo from "./logo";
 import MenuLinks from "./menuLinks";
 import MobileDrawer from "./mobileDrawer";
+import { ColorModeButton } from "./color-mode";
 
 export const NavImage = () => {
     return(
-        
         <Image 
         asChild
         maskImage="linear-gradient(to bottom, black 50%, transparent)"
@@ -23,36 +23,35 @@ export const NavImage = () => {
         position="relative"
         />
         </Image>
-        
-        
     );
 }
 
 export const Navbar = () => {
     return (
-        <Box > 
-        <Flex
-            as="nav"
-            align="center"
-            justify="space-between"
-            wrap="wrap"
-            gap={{ base: 2, lg: 2 }} 
-            px={{ base: 6, lg: 12 }} //6 12
-            py={3} 
-            maxW={{ base: "full", xl: "1440px" }}
-            mx="auto"
-            overflow="hidden"
-        >
-            <Logo />
-            {/* Desktop Menu */}
-            <Box display={{ base: "none", md: "block" }} bg="whiteAlpha.500" p={1} borderRadius={"sm"} style={{ zIndex: 1 }}>
-                <MenuLinks />
-            </Box>
-            {/* Mobile Menu */}
-            <Box display={{ base: "block", md: "none" }} bg="whiteAlpha.500" p={1} borderRadius={"sm"} style={{ zIndex: 1 }}>
-                <MobileDrawer />
-            </Box>
-        </Flex>
+        <Box>
+            <Flex
+                as="nav"
+                align="center"
+                //justify="space-between"
+                justify="flex-end"
+                wrap="wrap"
+                //gap={{ base: 2, lg: 2 }} 
+                px={{ base: 6, lg: 6 }} //6 12
+                py={3} 
+                maxW={{ base: "full", xl: "1440px" }}
+                mx="auto"
+                overflow="hidden"
+            >
+                <Logo />
+                {/* Desktop Menu */}
+                <Box display={{ base: "none", md: "block" }} bg="whiteAlpha.500" p={1} borderRadius={"sm"} style={{ zIndex: 1 }}>
+                    <ColorModeButton />
+                </Box>
+                {/* Mobile Menu */}
+                <Box display={{ base: "block", md: "none" }} bg="whiteAlpha.500" p={1} borderRadius={"sm"} style={{ zIndex: 1 }}>
+                    <MobileDrawer />
+                </Box>
+            </Flex>
         </Box>
     )
 }

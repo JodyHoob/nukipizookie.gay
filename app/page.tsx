@@ -1,11 +1,13 @@
 "use client"
 
-import { Container, Box, Heading, Center, Image, VStack, HStack, Tabs } from "@chakra-ui/react";
+import { Container, Box, Heading, Center, Image, VStack, HStack, Tabs, TabsContent, Separator } from "@chakra-ui/react";
 import { NavImage, Navbar } from "@/components/ui/navbar";
 import { Epilogue } from "next/font/google"
 import Portfolio from "./portfolio/page";
 import About from "./about/page";
 import Side from "./side/page"
+import Homo from "./home/page";
+import { ColorModeButton } from "@/components/ui/color-mode";
 
 const epilogue = Epilogue({ 
   weight: "700"
@@ -20,12 +22,10 @@ export default function Home() {
                    <Box h="1vh" position="relative">
                       <NavImage></NavImage>
                     </Box>
-                    <Box maxW="full">
-                    <   Navbar></Navbar>
-                    </Box>
+                    
                 </center>
 
-                <HStack align="start" w="100%">
+                <HStack align="start" w="100%" py="72px">
 
                   <Box py="10vh" h="90vh" w="20%" position="sticky" top="-20">
                     <Side></Side>
@@ -36,7 +36,7 @@ export default function Home() {
                     px={4}
                     //minW={}
                     defaultValue="home"
-                    variant="line"
+                    variant="plain"
                     className={`text-center ${epilogue.className}`}
                     
                     css={{
@@ -45,17 +45,27 @@ export default function Home() {
                         "--tabs-indicator-shadow": "shadows.xs",
                     }}
                     >
-                        <Tabs.List>
-                            <Tabs.Trigger value="home" className={`text-center ${epilogue.className}`} fontSize={24}>Home</Tabs.Trigger>
-                            <Tabs.Trigger value="about" className={`text-center ${epilogue.className}`} fontSize={24}>About Me</Tabs.Trigger>
-                            <Tabs.Trigger value="portfolio" className={`text-center ${epilogue.className}`} fontSize={24}>Portfolio</Tabs.Trigger>
-                            <Tabs.Indicator />
-                        </Tabs.List>
+                        <HStack w="100%">
+                          <ColorModeButton />
+                          <Tabs.List w="100%">
+                              <Tabs.Trigger value="home" className={`text-center ${epilogue.className}`} fontSize={24}>Home</Tabs.Trigger>
+                              <Tabs.Trigger value="about" className={`text-center ${epilogue.className}`} fontSize={24}>About Me</Tabs.Trigger>
+                              <Tabs.Trigger value="portfolio" className={`text-center ${epilogue.className}`} fontSize={24}>Portfolio</Tabs.Trigger>
+                              <Tabs.Indicator />
+                          </Tabs.List>
+                        </HStack>
+
+                        <Separator></Separator>
+                        
+                        
                         <Tabs.Content value="portfolio"> 
                           <Portfolio></Portfolio>
                         </Tabs.Content>
                         <Tabs.Content value="about"> 
                           <About></About>
+                        </Tabs.Content>
+                        <Tabs.Content value="home"> 
+                          <Homo></Homo>
                         </Tabs.Content>
                     </Tabs.Root>
                   </Box>

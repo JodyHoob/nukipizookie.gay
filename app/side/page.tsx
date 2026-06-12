@@ -1,7 +1,13 @@
 "use client"
 
-import { Container, Box, Heading, Center, Image, VStack, HStack, Tabs, Separator, Stack } from "@chakra-ui/react";
+import { Container, Box, Heading, Center, Image, VStack, HStack, Tabs, Separator, Stack, Link, Button } from "@chakra-ui/react";
 import { Epilogue } from "next/font/google"
+
+import Logo from "@/components/ui/logo";
+import MobileDrawer from "@/components/ui/mobileDrawer";
+import MenuLinks from "@/components/ui/menuLinks";
+import SupportButton from "@/components/ui/supportButton";
+import { ColorModeButton } from "@/components/ui/color-mode";
 
 const epilogue = Epilogue({ 
   weight: "700"
@@ -34,6 +40,12 @@ export default function Side() {
                         <p className={`text-center ${epilogue.className}`}>
                             (They/It)
                         </p>
+                    </Box>
+
+                    <Separator width="15vw" height="1vh"></Separator>
+
+                    <Box>
+                        <SupportButton></SupportButton>
                     </Box>
             </VStack>
         </center>
