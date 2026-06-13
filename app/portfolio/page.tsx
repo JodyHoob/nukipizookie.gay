@@ -11,9 +11,9 @@ const epilogue = Epilogue({
 
 export default function Portfolio() {
   return (
-    <Container maxW="full" px={0} >
+    <Container maxW="full" px={0}>
 
-    <Box py="4" style={{ zIndex: 0}}> 
+    <Box py="3vh" style={{ zIndex: 0}} bg="bg.card" borderRadius="4xl"> 
           <Flex
               as="nav"
               align="center"

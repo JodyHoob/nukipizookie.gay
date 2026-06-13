@@ -15,12 +15,12 @@ const epilogue = Epilogue({
 
 export default function Side() {
   return (
-    <Container maxW="full" px={0} >
+    <Container maxW="full" px={0}>
         <center>
 
-            <VStack gap="2" >
+            <VStack gap="2">
                 
-                    <Box borderWidth="thick" borderRadius="full" borderColor="" boxSize="50%">
+                    <Box borderWidth="thick" borderRadius="full" borderColor="frame" boxSize="50%">
                         
                         <Image
                             src="/Photo.jpeg"
@@ -33,11 +33,11 @@ export default function Side() {
                     </Box>
 
                     <Box fontSize={25}>
-                        <h1 className={`text-center ${epilogue.className}`}>Jody Niko</h1>
+                        <h1>Jody Niko</h1>
                     </Box>
 
                     <Box px="10%" fontSize={15}>
-                        <p className={`text-center ${epilogue.className}`}>
+                        <p>
                             (They/It)
                         </p>
                     </Box>

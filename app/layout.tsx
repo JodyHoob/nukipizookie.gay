@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, } from "next/font/google";
+import { Epilogue } from "next/font/google";
 import "./globals.css";
 import { Provider } from "./provider"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+/*const epilogue = Epilogue({ 
+  weight: "100"
+});*/
+
+const epilogue = Epilogue({
   subsets: ["latin"],
+  variable: "--font-epilogue",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Nuki ^w^",
@@ -26,7 +26,8 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      //className={`text-center ${epilogue.className}`}
+      className={`${epilogue.variable} text-center`}
     >
       <body className="min-h-full flex flex-col">
         <Provider>{children}</Provider>

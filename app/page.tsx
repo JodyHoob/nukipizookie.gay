@@ -37,25 +37,24 @@ export default function Home() {
                     //minW={}
                     defaultValue="home"
                     variant="plain"
-                    className={`text-center ${epilogue.className}`}
                     
                     css={{
                         fontSize: 24,
-                        "--tabs-indicator-bg": "colors.gray.subtle",
                         "--tabs-indicator-shadow": "shadows.xs",
+                        "--tabs-indicator-bg": "colors.bg.muted",
                     }}
                     >
                         <HStack w="100%">
                           <ColorModeButton />
                           <Tabs.List w="100%">
-                              <Tabs.Trigger value="home" className={`text-center ${epilogue.className}`} fontSize={24}>Home</Tabs.Trigger>
-                              <Tabs.Trigger value="about" className={`text-center ${epilogue.className}`} fontSize={24}>About Me</Tabs.Trigger>
-                              <Tabs.Trigger value="portfolio" className={`text-center ${epilogue.className}`} fontSize={24}>Portfolio</Tabs.Trigger>
+                              <Tabs.Trigger value="home" color="text.button2" _selected={{ bg: "button.bg" }} className={`text-center ${epilogue.className}`} fontSize={24}>Home</Tabs.Trigger>
+                              <Tabs.Trigger value="about" color="text.button2" _selected={{ bg: "button.bg" }} className={`text-center ${epilogue.className}`} fontSize={24}>About Me</Tabs.Trigger>
+                              <Tabs.Trigger value="portfolio" color="text.button2" _selected={{ bg: "button.bg" }} className={`text-center ${epilogue.className}`} fontSize={24}>Portfolio</Tabs.Trigger>
                               <Tabs.Indicator />
                           </Tabs.List>
                         </HStack>
 
-                        <Separator></Separator>
+                        <Separator borderColor="button.bg"></Separator>
                         
                         
                         <Tabs.Content value="portfolio"> 

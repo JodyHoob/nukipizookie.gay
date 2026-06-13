@@ -10,9 +10,9 @@ const epilogue = Epilogue({
 
 export default function Homo() {
   return (
-    <Container maxW="full" px={0}>
+    <Container maxW="full" px={0} bg="bg.card" height="70vh" borderRadius="4xl">
       <center>
-        <Box h="30vh" w="50%" borderWidth="thick" borderRadius="md" borderColor="">
+        <Box h="33vh" py="3vh">
           <Scene></Scene>
         </Box>
       </center>
