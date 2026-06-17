@@ -6,11 +6,12 @@ import Model from "./model";
 
 export default function Scene() {
   return (
-    <Canvas camera={{ position: [0, 0, 3] }}>
+    <Canvas camera={{ position: [-2, 1.5, 3] }}>
       <ambientLight intensity={1} />
-      <directionalLight position={[2, 2, 2]} />
+      <directionalLight position={[2, 1, 2]} />
+      <directionalLight position={[0, -1, -10]} />
       <Model />
-      <OrbitControls />
+      <OrbitControls autoRotate autoRotateSpeed={5}/>
     </Canvas>
   );
 }

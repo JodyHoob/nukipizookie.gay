@@ -51,7 +51,7 @@ const customConfig = defineConfig({
 
         "text.primary": {
           value: {
-            _light: "#FFF7ED",
+            _light: "#000000",
             _dark: "#FFF7ED",
           },
         },

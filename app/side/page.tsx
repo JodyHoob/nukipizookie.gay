@@ -42,7 +42,20 @@ export default function Side() {
                         </p>
                     </Box>
 
-                    <Separator width="15vw" height="1vh"></Separator>
+                    <Separator width="15vw" height="1vh" borderColor="button.bg"></Separator>
+
+                    <Box px="10%" fontSize={18}>
+                        <p>
+                        <u>Multimedia</u>
+                        </p>
+                    </Box>
+                    <Box px="10%" fontSize={17}>
+                        2D/3D Digital Art and Design <br/>
+                        Developer <br/>
+                        Electronics <br/>
+                    </Box>
+
+                    <Separator width="15vw" height="1vh" borderColor="button.bg"></Separator>
 
                     <Box>
                         <SupportButton></SupportButton>
